@@ -1,7 +1,7 @@
 package ru.stqa.geometry.figures;
 
 
-public record Square (double side) {
+public record Square(double side) {
 
 /*
     //Свойство объекта
@@ -18,13 +18,11 @@ public record Square (double side) {
     }
 
 
-
-
     public double area() {
         return this.side * this.side;
     }
 
     public double perimeter() {
-         return 4 * this.side;
+        return 4 * this.side;
     }
 }
