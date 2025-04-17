@@ -8,7 +8,8 @@ public class Triangle {
     }
 
     private static double triangleArea(double a, double b, double c) {
-        return Math.pow(HalfPerimeter(a, b, c) * (HalfPerimeter(a, b, c) - a) * (HalfPerimeter(a, b, c) - b) * (HalfPerimeter(a, b, c) - c), 0.5);
+        double HalfPerimeter = halfPerimeter(a, b, c);
+        return Math.pow(HalfPerimeter * (HalfPerimeter - a) * (HalfPerimeter - b) * (HalfPerimeter - c), 0.5);
     }
 
     public static void printTrianglePerimeter(double a, double b, double c) {
@@ -21,8 +22,9 @@ public class Triangle {
         return a + b + c;
     }
 
-    public static double HalfPerimeter(double a, double b, double c) {
-        return perimeter(a, b, c) / 2;
+    public static double halfPerimeter(double a, double b, double c) {
+        double Perimeter = perimeter(a, b, c);
+        return Perimeter / 2;
 
     }
 
